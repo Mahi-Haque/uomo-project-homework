@@ -4,24 +4,24 @@
     outline: 0;
     box-sizing: border-box;
     font-family: "Jost", sans-serif;
-
 }
 
-ul,ol {
+ul, ol {
     list-style-type: none;
 }
 
-a, a:hover {
+a,a:hover { 
     text-decoration: none;
     display: inline-block;
 }
-
 h1,h2,h3,h4,h5,h6,p {
     margin: 0;
     padding: 0;
     line-height: 0.8;
 }
-/* Common CSS END */
+/* All Common CSS END  */
+
+/* Navbar Part  */
 .nav-link {
     text-transform: uppercase;
     font-size: 14px;
@@ -32,13 +32,28 @@ h1,h2,h3,h4,h5,h6,p {
     margin: 15px;
 }
 .menuIcons {
+    position: relative;
     display: flex;
     column-gap: 10px;
     align-items: center;
 }
-.menuIcons i{
+.menuIcons i {
     color: #222;
 }
+.menuNum {
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    width: 16px;
+    height: 16px;
+    color: white;
+    background-color: #B9A16B;
+    position: absolute;
+    border-radius: 50%;
+    left: 100px;
+    top: 10px;
+}
+
 .nav-link::after {
     position: absolute;
     height: 2px;
@@ -49,11 +64,47 @@ h1,h2,h3,h4,h5,h6,p {
     bottom: -2px;
     visibility: hidden;
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.4s;
 }
-
-.nav-link:hover.nav-link::after {
+.nav-link:hover.nav-link::after{
     visibility: visible;
     opacity: 1;
     width: 30px;
+}
+
+/* Adds Part */
+#adsPart {
+    padding-top: 100px;
+    padding-bottom: 95px;
+}
+
+/* Products Part  */
+#productsPart {
+    padding: 50px 0;
+
+}
+.productTitle h3 {
+    font-size: 35px;
+    font-weight: 400;
+    color: #212529;
+}
+.filterBtn  button{
+    border: none;
+    background-color: transparent;
+    margin: 0 20px;
+    transition: 0.4s;
+}
+.filterBtn button:hover {
+    border-bottom: 2px solid #212529;
+    font-weight: 700;
+}
+
+/* Countdown Part */
+#CountdownPart {
+    background: url(../images/Countdown.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 360px;
+    padding-bottom: 45px;
 }
